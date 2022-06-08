@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+%packages:
+% \usepackage{tfrupee}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{gensymb}
+% \usepackage{txfonts}
+
+% \def\inputGnumericTable{}
+
+% \usepackage[latin1]{inputenc}                                 
+% \usepackage{color}                                            
+% \usepackage{array}                                            
+% \usepackage{longtable}                                        
+% \usepackage{calc}                                             
+% \usepackage{multirow}                                         
+% \usepackage{hhline}                                           
+% \usepackage{ifthen}
+% \usepackage{caption} 
+% \captionsetup[table]{skip=3pt}  
+% \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+% \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+% %\renewcommand{\thefigure}{\arabic{table}}
+% \renewcommand{\thetable}{\arabic{table}}      
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{tfrupee}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}    
+\usepackage{textcomp, gensymb}         
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                             
+\usepackage{mathtools}
+\usepackage{ifthen}
+\usepackage{caption} 
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\renewcommand{\thefigure}{\arabic{table}}
+\renewcommand{\thetable}{\arabic{table}}   
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{AI1110 \\ Assignment-4} 
+\author{Pettugadi Pranav CS21BTECH11063}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{\textbf{Papoullis 4-11:} } 
+       The space S contains of all points $t_i$ in the interval (0,1) and $P\{0 \le t_i \le y\}=y$ 
+       for every$y \le 1$ . The function G(x) is increasing from $G(-\infty)=0$ to $G(\infty)=1$
+; hence it has an inverse $G^{-1}(y) = H(y)$. The random variable$ X(t_i)= H(t_i)$. Show that $F_X(x)=G(x)$     \end{block}
+     
+\end{frame}
+
+
+
+\section{Solution}
+\begin{frame}{Solution}
+  \begin{block}{}
+      From the given information;\\ t_i(0,1)\\
+       $P\{0\le t_i \le y\}=y$\\
+        $X(t_i) =H(t_i)$ \\ $H(x) = G^{-1}(x)$\\
+        \end{block}
+        
+        \begin{align}
+            F_X(x) &= P\{X(t_i) \le x\}\\
+                   &=  P\{H(t_i) \le x\}\\
+        \end{align}
+        
+        \end{frame}
+        
+        \begin{frame}
+        \begin{align}
+            X(t_i) \le x\\
+            H(t_i) \le x\\
+            t_i \le H^{-1}(x)\\
+            t_i \le G(x)\\
+            \end{align}
+            \begin{align}
+            P\{X(t_i) \le x\} = P\{t_i \le G(x)\}\\
+            \end{align}
+            \end{frame}
+            
+            \begin{frame}
+            As $0 \le G(x) \le 1$
+            
+            \begin{align}
+            P\{t_i \le G(x)\} &= P\{0 \le t_i \le G(x)\}\\
+            &= G(x)\\
+            \end{align}
+        $P\{X(t_i) \le x\}=G(x)$  \because  eq (12)\\
+ \therefore $F_X(x)=G(x)$
+  \end{frame}
+  
+ 
+\end{document}
